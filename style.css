@@ -128,3 +128,14 @@ span {
     color: #000;
     box-shadow: 0 0 1rem gold;
 }
+
+.intro {
+    margin-top: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #f1f1ebe5;
+    border-radius: 30px;
+    padding: 20px;
+    width: 720px;
+    box-shadow: #000 0 0 1rem;
+}

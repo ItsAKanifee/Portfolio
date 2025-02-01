@@ -96,7 +96,8 @@ span {
     border-radius: 30px;
     
     box-shadow: #000 0 0 1rem;
-    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .home-content p {

@@ -11,6 +11,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="Styles/project_styles.css">
+
     </head>
     <body>
         <header>
@@ -21,12 +23,30 @@
                 <a href="about.html">About Me</a>
                 <a href="projects.html">Projects</a>
                 <a href="contact.html">Contact Me</a>
+                <a href="Scripts/Resume.pdf" target="_blank">Resume</a>
             </nav>
         </header>
+        
+        <section class = "projects">
+            
+            <div class = "project">
+                <h2>Muse Brain Scanning Video Game Controller</h2>
+                <p>Project 1 Description</p>
+            </div>
+            <div class = "project">
+                <h2>3 Body Problem</h2>
+                <p>Project 2 Description</p>
+            </div>
+            <div class = "project">
+                <h2>Ray Tracing Algorithm</h2>
+                <p>Project 3 Description</p>
+                <canvas id = "canvas" width = "300px" height = "200px"></canvas>
+            </div>
+        </section>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <script src="" async defer></script>
+        <script src="Scripts/RayTracer.js" async defer></script>
     </body>
 </html>

@@ -14,9 +14,8 @@
 }
 
 .project{
-    margin: 10px;
+    overflow-y: hidden;
     
-    border: 1px solid gold;
     border-radius: 10px;
     background-color: white;
     box-shadow: #000 0 0 1rem; 

@@ -96,6 +96,7 @@ span {
     font-weight: 700;
     line-height: 1.3;
     border-radius: 10px;
+    color: black;
     
     box-shadow: #000 0 0 1rem;
     padding-top: 10px;
@@ -119,7 +120,6 @@ span {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    border: 1px solid gold;
     box-shadow: #000 0 0 1rem;
     
 
@@ -128,12 +128,13 @@ span {
 .socials a:hover {
     background-color: gold;
     color: #000;
-    box-shadow: 0 0 1rem gold;
+    box-shadow: #000 0 0 1rem;
 }
 
 .socials a:active {
     transform: scale(0.9);
     transform: translateY(0.1rem);
+    box-shadow: 0 0 1rem gold;
 }
 
 .intro {

@@ -1,0 +1,6 @@
+Developed a video game controller using the Muse EEG headband to interpret 
+brainwave data and control gameplay. Utilized Python and Bluetooth communication 
+to process real-time EEG signals. Designed and tested custom signal processing 
+algorithms. Enabled hands-free interaction, demonstrating innovative applications 
+of brain-computer interfaces, as well as showcasing ways to innovate video game accessibility for 
+those without full use of their hands

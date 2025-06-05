@@ -1,8 +1,14 @@
-
+.projects-header{
+    padding-top : 100px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
 
 
 .projects{
-    margin: 10vw;
     display: flex;
     flex-direction: space-around;
     justify-content: space-around;
@@ -13,9 +19,13 @@
 
 }
 
+.projects :hover{
+    box-shadow: gray 0 0 1rem;
+    cursor: pointer;
+}
+
 .project{
     overflow-y: hidden;
-    
     border-radius: 10px;
     background-color: white;
     box-shadow: #000 0 0 1rem; 

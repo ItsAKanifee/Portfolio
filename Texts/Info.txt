@@ -1,4 +1,6 @@
-I am a student at Carngie Mellon studying Computer Engineering.
-
+I am a sophomore at Carnegie Mellon University majoring in Electrical and Computer Engineering. 
+I am passionate about problem solving, coding, circuits, mathematics, and physics. 
+My experience includes researching quantum squeezing algorithms at Rice University.
+I am especially interested in quantum computing, semiconductors, and innovating new technologies.
 
 

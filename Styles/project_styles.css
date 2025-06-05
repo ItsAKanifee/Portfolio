@@ -20,7 +20,7 @@
 }
 
 .projects :hover{
-    box-shadow: gray 0 0 1rem;
+    box-shadow: gray 0 0 5px;
     cursor: pointer;
 }
 
@@ -28,5 +28,5 @@
     overflow-y: hidden;
     border-radius: 10px;
     background-color: white;
-    box-shadow: #000 0 0 1rem; 
+    box-shadow: #000 0 0 5px; 
 }

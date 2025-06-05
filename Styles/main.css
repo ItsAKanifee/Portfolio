@@ -98,7 +98,7 @@ span {
     border-radius: 10px;
     color: black;
     
-    box-shadow: #000 0 0 1rem;
+    box-shadow: #000 0 0 7px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -120,7 +120,7 @@ span {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    box-shadow: #000 0 0 1rem;
+    box-shadow: #000 0 0 5px;
     
 
 }
@@ -145,7 +145,7 @@ span {
     border-radius: 30px;
     padding: 20px;
     width: 720px;
-    box-shadow: #000 0 0 1rem;
+    box-shadow: #000 0 0 5px;
 }
 
 @media (max-width: 768px) {

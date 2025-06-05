@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet" href="Styles/main.css">
         <link rel="stylesheet" href="Styles/project_styles.css">
+        <link rel="stylesheet" href="Styles/Popup.css">
         
     </head>
     <body>
@@ -53,17 +54,22 @@
             <p>Here are some of the projects I have worked on:</p>
         </div>
 
+        <dialog>
+            <p>What will happen</p>
+            <button class = "close" onclick="this.parentElement.close()">Close</button>
+        </dialog>
+
         <section class = "projects">
             
-            <div class = "project">
+            <div class = "project" onclick="Popup()">
                 <h2>Muse Brain Scanning Video Game Controller</h2>
             </div>
 
-            <div class = "project">
+            <div class = "project" onclick="Popup()">
                 <h2>Buggy Visualizer</h2>
             </div>
 
-            <div class = "project">
+            <div class = "project" onclick="Popup()">
                 <h2>Ray Tracing Algorithm</h2>
                 <p>Project 3 Description</p>
                 <canvas id = "canvas" width = "300px" height = "200px"></canvas>
@@ -73,7 +79,7 @@
         
 
         
-        <!--script src="Scripts/Info.js" async defer></script!-->
+        <script src="Scripts/Info.js" async defer></script>
         <script src="Scripts/RayTracer.js" async defer></script>
     </body>
 </html>

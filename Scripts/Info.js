@@ -1,3 +1,4 @@
+const dialog = document.querySelector("dialog");
 var Info = "";
 
 function time() {
@@ -60,3 +61,6 @@ fetch('Texts/Info.txt')
   .catch(error => console.error(error));
 
 
+function Popup() {
+    dialog.showModal();
+}

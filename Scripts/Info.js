@@ -61,6 +61,16 @@ fetch('Texts/Info.txt')
   .catch(error => console.error(error));
 
 
-function Popup() {
+function Popup(i) {
+    TextOnPopup(i);
     dialog.showModal();
+}
+
+function TextOnPopup(i) {
+    fetch('Texts/Project' + i + '.txt')
+  .then(response => response.text())
+  .then(data => Info = data)
+  .then(() => document.getElementById("dialog-p").innerHTML = Info)
+  
+  .catch(error => console.error(error));
 }

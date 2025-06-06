@@ -55,23 +55,22 @@
         </div>
 
         <dialog>
-            <p>What will happen</p>
+            <p id = "dialog-p">What will happen</p>
             <button class = "close" onclick="this.parentElement.close()">Close</button>
         </dialog>
 
         <section class = "projects">
             
-            <div class = "project" onclick="Popup()">
+            <div class = "project" id = "project1" onclick="Popup(1)" >
                 <h2>Muse Brain Scanning Video Game Controller</h2>
             </div>
 
-            <div class = "project" onclick="Popup()">
+            <div class = "project" id = "project2" onclick="Popup(2)">
                 <h2>Buggy Visualizer</h2>
             </div>
 
-            <div class = "project" onclick="Popup()">
+            <div class = "project" id = "project3" onclick="Popup(3)">
                 <h2>Ray Tracing Algorithm</h2>
-                <p>Project 3 Description</p>
                 <canvas id = "canvas" width = "300px" height = "200px"></canvas>
             </div>
             

@@ -25,9 +25,9 @@
 
             <nav>
                 <a href="index.html">Home</a>
-                <a href="about.html">About Me</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact Me</a>
+                <a href="javascript:AboutMe()">About Me</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="#" onclick="(function(){const p=document.getElementById('dialog-p');p.innerHTML=(typeof Info!=='undefined'&&Info)?Info:'Contact me at: ajaycd@icloud.com';const d=document.getElementById('dialog');if(d) d.showModal();return false;})();">Contact Me</a>
                 <a href="Texts/Resume.pdf" target="_blank">Resume</a>
             </nav>
         </header>
@@ -38,7 +38,7 @@
             </div>
             <div class = "home-content">
                 <h1>Hi, I'm <span>Ajay</span></h1>
-                <p>I'm a student at Carnegie Mellon University majoring in Electrical and Computer Engineering.</p>
+                <p>Chasing the boundary between what exists and what’s possible.</p>
                 
                 <div class = "socials">
                     <a href="https://www.linkedin.com/in/ajay-clark-desai-4087b4281/" target = "_blank"><i class = "fa-brands fa-linkedin"></i></a>
@@ -50,37 +50,34 @@
         </section>
 
         <div class = "projects-header">
-            <h2>Projects</h2>
+            <h1>Projects</h1>
             <p>Here are some of the projects I have worked on:</p>
         </div>
 
-        <dialog>
+        <dialog id = "dialog">
             <p id = "dialog-p">What will happen</p>
-            <button class = "close" onclick="this.parentElement.close()">Close</button>
+            <button class = "close" onclick="this.parentElement.close()">X</button>
         </dialog>
 
-        <section class = "projects">
-            
-            <div class = "project" id = "project1" onclick="Popup(1)" >
-                <h2>Muse Brain Scanning</h2>
-                <h2>Video Game Controller</h2>
-                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS0EzUUtO1jtQQ2Gn_tnWg0zXYlPfWnleEprM6mXaW82tqM5wVg9zISPx6yK8DRVpCTnD_fjkZz-nlP76i_fQkxbsgIyznP4EPKZJDFitG7kiQe29Erp3uVtcGiIyndUJqW5m0CC90&usqp=CAc" alt="Muse Brain Scanning Video Game Controller">
-            </div>
-
-            <div class = "project" id = "project2" onclick="Popup(2)">
-                <h2>Buggy Visualizer</h2>
-            </div>
-
-            <div class = "project" id = "project3" onclick="Popup(3)">
-                <h2>Ray Tracing Algorithm</h2>
-                <canvas id = "canvas" width = "300px" height = "200px"></canvas>
-            </div>
-            
+        <section id="projects" class = "projects">
+            <!-- Project tiles will be inserted here by Project_Tile.js -->
         </section>
         
 
         
-        <script src="Scripts/Info.js" async defer></script>
+        <script src="Scripts/Info.js" defer></script>
+        <script src="Scripts/Project_Tile.js" defer></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const projects = [
+                { id: 1, title: 'Muse Brain Controller', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL6Wb_5CFsZf4hm8wdq6dgK4heVyo5daYczQ&s', description: 'EE + game controller using Muse', tags: ['hardware','game'] },
+                { id: 2, title: '3 Body Problem', image: 'images/3body.svg', description: 'Simulation & visualization', tags: ['simulation'] },
+                { id: 3, title: 'Ray Tracer', image: 'images/rt.png', link: 'https://itsakanifee.github.io/Ray-Tracing/', description: 'Basic ray tracing demo', tags: ['graphics'] }
+            ];
+
+            ProjectTile.createGrid('.projects', projects);
+        });
+        </script>
         <script src="Scripts/RayTracer.js" async defer></script>
     </body>
 </html>

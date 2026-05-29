@@ -70,9 +70,10 @@
         <script>
         document.addEventListener('DOMContentLoaded', () => {
             const projects = [
-                { id: 0, title: 'Quantum Squeezing', image: 'images/qs.png', repo: 'https://github.com/FRANK-RAN/Quantum-Measurement-Software', description: 'GPU Acceleration for faster data proccessing to better analyze the effect of Quantumly Squeezed Lasers', tags: ['quantum', 'GPU-acceleration'] },
+                {id: 3, title: 'GPU Design' , image: 'images/gpu.png', description: 'A GPU designed from the ground up in Verilog, with a custom instruction set and a software rasterizer to test it', repo: 'https://github.com/ItsAKanifee/GPU', tags: ['GPU', 'Verilog', 'hardware']},
+                { id: 2, title: 'Quantum Squeezing', image: 'images/qs.png', repo: 'https://github.com/FRANK-RAN/Quantum-Measurement-Software', description: 'GPU Acceleration for faster data proccessing to better analyze the effect of Quantumly Squeezed Lasers', tags: ['quantum', 'GPU-acceleration'] },
                 { id: 1, title: 'Muse Brain Controller', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL6Wb_5CFsZf4hm8wdq6dgK4heVyo5daYczQ&s', description: 'EE + game controller using Muse', repo: 'https://github.com/ItsAKanifee/Muse_BrainReader_Game_Controller', tags: ['hardware','game'] },
-                { id: 2, title: 'Ray Tracer', image: 'images/rt.png', link: 'https://itsakanifee.github.io/Ray-Tracing/', description: 'Basic ray tracing demo', tags: ['graphics'] }
+                { id: 0, title: 'Ray Tracer', image: 'images/rt.png', link: 'https://itsakanifee.github.io/Ray-Tracing/', description: 'Basic ray tracing demo', tags: ['graphics'] }
             ];
 
             ProjectTile.createGrid('.projects', projects);

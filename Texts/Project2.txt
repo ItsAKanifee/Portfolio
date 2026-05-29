@@ -1,4 +1,4 @@
-This project consisted of me creating a raytracer in order to understand how raytracing
-and 3d design work. The psuedo-code is credited to https://gabrielgambetta.com/computer-graphics-from-scratch/02-basic-raytracing.html.
-Here is the link to my repo: https://github.com/ItsAKanifee/Ray-Tracing
-I do want to try optimizing this design on hardware and utilize CUDA in a future project
+Over the summer of 2025, I worked alongside Andy Koh at Rice University to 
+develop software to run a Quantum Squeezing Experiment within Dr. Hanyu Zhu's Lab.
+The project required me to optimize CUDA code by 50% to run billions of operations simultaneously to
+analyze the signals from the lasers

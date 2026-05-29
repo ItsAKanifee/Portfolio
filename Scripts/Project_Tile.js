@@ -5,6 +5,7 @@ class ProjectTile {
         this.image = options.image ?? '';
         this.description = options.description ?? '';
         this.link = options.link ?? null;
+        this.repo = options.repo ?? null;
         this.tags = options.tags ?? [];
         this.container = typeof options.container === 'string' ? document.querySelector(options.container) : options.container || null;
         this.size = options.size || 'medium';
@@ -57,6 +58,17 @@ class ProjectTile {
             actions.appendChild(a);
         }
 
+        if (this.repo) {
+            const a = document.createElement('a');
+            a.className = 'project-tile__link';
+            a.href = this.repo;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.textContent = 'Repo';
+            // prevent anchor clicks from bubbling to the tile root
+            a.addEventListener('click', (ev) => ev.stopPropagation());
+            actions.appendChild(a);
+        }
         const more = document.createElement('button');
         more.type = 'button';
         more.className = 'project-tile__more';

@@ -1,0 +1,4 @@
+Over the summer of 2025, I worked alongside Andy Koh at Rice University to 
+develop software to run a Quantum Squeezing Experiment within Dr. Hanyu Zhu's Lab.
+The project required me to optimize CUDA code by 50% to run billions of operations simultaneously to
+analyze the signals from the lasers

@@ -26,7 +26,7 @@
     "description": "EE + game controller using Muse",
     "repo": "https://github.com/ItsAKanifee/Muse_BrainReader_Game_Controller",
     "tags": ["hardware", "game"],
-    "category": "hardware",
+    "category": "software",
     "textFile": "Texts/Project1.txt"
   },
   {
@@ -43,7 +43,7 @@
   {
     "id": 4,
     "title": "CMOS DAC Design and Verification",
-    "image": "images/dac.svg",
+    "image": "images/dac.png",
     "description": "4-bit CMOS DAC design, layout, and verification",
     "tags": ["analog","DAC","CMOS","layout"],
     "category": "hardware",

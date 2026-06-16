@@ -32,10 +32,20 @@ class ProjectTile {
 
         const p = document.createElement('p');
         p.className = 'project-tile__desc';
-        p.textContent = this.description;
+        // show a TL;DR (first sentence) on the tile for quick scan
+        const desc = (this.description || '').trim();
+        const tl = desc ? desc.split(/(?<=[.!?])\s+/)[0] : '';
+        p.textContent = tl || desc;
 
         const tagWrap = document.createElement('div');
         tagWrap.className = 'project-tile__tags';
+        // label the tech stack briefly
+        if (this.tags && this.tags.length) {
+            const techLabel = document.createElement('span');
+            techLabel.className = 'project-tile__tech-label';
+            techLabel.textContent = 'Tech: ';
+            tagWrap.appendChild(techLabel);
+        }
         this.tags.forEach(t => {
             const span = document.createElement('span');
             span.className = 'project-tile__tag';

@@ -13,6 +13,58 @@ dialog{
     backdrop-filter: blur(5px);
 }
 
+#dialog-content {
+    max-width: 720px;
+    color: #fff;
+    background: transparent;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+#dialog-content p {
+    background: transparent;
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+.popup-tldr {
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.popup-tech {
+    margin: 8px 0;
+}
+
+.popup-tech__tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    padding: 4px 8px;
+    margin-right: 6px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.popup-links a {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 6px 10px;
+    background: #111;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.popup-details .popup-pre {
+    white-space: pre-wrap;
+    background: transparent;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 12px;
+}
+
 button {
     background-color: rgba(255, 255, 255, 0.143);
     color: black;

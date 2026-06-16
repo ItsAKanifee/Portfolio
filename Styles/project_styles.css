@@ -108,6 +108,13 @@
     font-size: 0.75rem;
 }
 
+.project-tile__tech-label {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
 .project-tile__actions {
     margin-top: 8px;
     display: flex;
@@ -130,3 +137,25 @@
 .project-tile--small { width: 220px; height: 140px; }
 .project-tile--medium { width: 300px; height: 200px; }
 .project-tile--large { width: 420px; height: 280px; }
+
+/* Filter bar styles */
+.project-filters {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 12px 0 8px 0;
+}
+.filter-btn {
+    background: transparent;
+    color: #111;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.filter-btn.active {
+    background: #464feb;
+    color: #fff;
+    border-color: #464feb;
+}

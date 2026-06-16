@@ -1,0 +1,52 @@
+[
+  {
+    "id": 3,
+    "title": "GPU Design",
+    "image": "images/gpu.png",
+    "description": "A GPU designed from the ground up in Verilog, with a custom instruction set and a software rasterizer to test it",
+    "repo": "https://github.com/ItsAKanifee/GPU",
+    "tags": ["GPU", "Verilog", "hardware"],
+    "category": "mixed",
+    "textFile": "Texts/Project3.txt"
+  },
+  {
+    "id": 2,
+    "title": "Quantum Squeezing",
+    "image": "images/qs.png",
+    "description": "GPU Acceleration for faster data proccessing to better analyze the effect of Quantumly Squeezed Lasers",
+    "repo": "https://github.com/FRANK-RAN/Quantum-Measurement-Software",
+    "tags": ["quantum", "GPU-acceleration"],
+    "category": "software",
+    "textFile": "Texts/Project2.txt"
+  },
+  {
+    "id": 1,
+    "title": "Muse Brain Controller",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL6Wb_5CFsZf4hm8wdq6dgK4heVyo5daYczQ&s",
+    "description": "EE + game controller using Muse",
+    "repo": "https://github.com/ItsAKanifee/Muse_BrainReader_Game_Controller",
+    "tags": ["hardware", "game"],
+    "category": "hardware",
+    "textFile": "Texts/Project1.txt"
+  },
+  {
+    "id": 0,
+    "title": "Ray Tracer",
+    "image": "images/rt.png",
+    "description": "Basic ray tracing demo",
+    "link": "https://itsakanifee.github.io/Ray-Tracing/",
+    "tags": ["graphics"],
+    "category": "software",
+    "textFile": "Texts/Project0.txt"
+  }
+  ,
+  {
+    "id": 4,
+    "title": "CMOS DAC Design and Verification",
+    "image": "images/dac.svg",
+    "description": "4-bit CMOS DAC design, layout, and verification",
+    "tags": ["analog","DAC","CMOS","layout"],
+    "category": "hardware",
+    "textFile": "Texts/Project4.txt"
+  }
+]

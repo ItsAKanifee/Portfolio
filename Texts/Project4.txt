@@ -1,0 +1,56 @@
+TL;DR: CMOS 4-bit DAC design, layout, and verification achieving 0–1.0 V range with fabrication-ready verification.
+Tech: CMOS, SPICE, Cadence, LVS, DRC
+Role: Design & Verification
+Impact: 0–1.0 V output range, ~0.148 V resolution, 16 steps (4-bit)
+
+## 📌 Project Overview
+
+### Problem
+
+Design a functional DAC capable of converting digital inputs into accurate analog voltage outputs while maintaining stability and manufacturability.
+
+---
+
+### What I Did
+
+- Designed logic circuits using **inverters and transmission gates** to control signal propagation
+
+- Implemented **latch and counter functionality** for sequential bit handling
+
+- Built and simulated a **multi-stage DAC** to generate analog output signals
+
+- Analyzed **voltage outputs and resolution**, including step size and output combinations
+
+- Investigated **impedance effects (≈2.64 kΩ)** and their impact on output range
+
+- Completed **full physical layout** and validated design with:
+
+✅ DRC (design rule check)
+
+- ✅ LVS (layout vs schematic matching)
+
+---
+
+## 📊 Impact & Results
+
+- Achieved DAC output range of **0–1.0 V** with discrete voltage steps
+
+- Identified minimum voltage resolution of **~0.148 V**
+
+- Verified **16 unique voltage combinations (4-bit DAC behavior)**
+
+- Demonstrated how impedance influences analog output accuracy
+
+- Delivered **fabrication-ready layout** with clean verification results
+
+---
+
+## 🧠 Lessons Learned
+
+- Small design factors (like impedance) can significantly affect analog accuracy
+
+- Synchronization between digital components is critical for meaningful output
+
+- Layout verification (DRC/LVS) is as important as circuit functionality
+
+- Bridging digital logic and analog behavior requires careful tradeoffs

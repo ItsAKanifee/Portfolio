@@ -4,81 +4,139 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Ajay Clark-Desai</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet" href="Styles/main.css">
-        <link rel="stylesheet" href="Styles/project_styles.css">
-        <link rel="stylesheet" href="Styles/Popup.css">
-        
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ajay Clark-Desai</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/project_styles.css">
+    <link rel="stylesheet" href="Styles/Popup.css">
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header>
-            <h1 id = "logo">Ajay Clark-Desai</h1>
+    <header>
+        <h1 id="logo">Ajay Clark-Desai</h1>
 
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="javascript:AboutMe()">About Me</a>
-                <a href="index.html#projects">Projects</a>
-                <a href="#" onclick="(function(){const p=document.getElementById('dialog-p');p.innerHTML=(typeof Info!=='undefined'&&Info)?Info:'Contact me at: ajaycd@icloud.com';const d=document.getElementById('dialog');if(d) d.showModal();return false;})();">Contact Me</a>
-                <a href="Texts/Resume.pdf" target="_blank">Resume</a>
-            </nav>
-        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="javascript:AboutMe()">About Me</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="#"
+                onclick="(function(){const p=document.getElementById('dialog-p');p.innerHTML=(typeof InfoText!=='undefined'&&InfoText)?InfoText:'Contact me at: ajaycd@icloud.com';const d=document.getElementById('dialog');if(d) d.showModal();return false;})();">Contact
+                Me</a>
+            <a href="Texts/Resume.pdf" target="_blank">Resume</a>
+        </nav>
+    </header>
 
-        <section class = "home">
-            <div class = "home-image">
-                <img src="images/Ajay.jpg" alt="Ajay Clark-Desai" class = "image">
+    <section class="home">
+        <div class="home-image">
+            <img src="images/Ajay.jpg" alt="Ajay Clark-Desai" class="image">
+        </div>
+        <div class="home-content">
+            <h1>Hi, I'm <span>Ajay</span></h1>
+            <p>Chasing the boundary between what exists and what’s possible.</p>
+
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/ajay-clark-desai-4087b4281/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ItsAKanifee" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
-            <div class = "home-content">
-                <h1>Hi, I'm <span>Ajay</span></h1>
-                <p>Chasing the boundary between what exists and what’s possible.</p>
-                
-                <div class = "socials">
-                    <a href="https://www.linkedin.com/in/ajay-clark-desai-4087b4281/" target = "_blank"><i class = "fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/ItsAKanifee" target = "_blank"><i class = "fa-brands fa-github"></i></a>
-                </div>
-            </div>
-            
-            
-        </section>
-
-        <div class = "projects-header">
-            <h1>Projects</h1>
-            <p>Here are some of the projects I have worked on:</p>
         </div>
 
-        <dialog id = "dialog">
-            <p id = "dialog-p">What will happen</p>
-            <button class = "close" onclick="this.parentElement.close()">X</button>
-        </dialog>
 
-        <section id="projects" class = "projects">
-            <!-- Project tiles will be inserted here by Project_Tile.js -->
-        </section>
-        
+    </section>
 
-        
-        <script src="Scripts/Info.js" defer></script>
-        <script src="Scripts/Project_Tile.js" defer></script>
-        <script>
+    <div class="projects-header">
+        <h1>Projects</h1>
+        <p>Here are some of the projects I have worked on:</p>
+    </div>
+
+    <div id="project-filters" class="project-filters" aria-label="Project filters"></div>
+
+    <dialog id="dialog">
+            <div id="dialog-content">
+                <p id="dialog-p">What will happen</p>
+            </div>
+        <button class="close" onclick="this.parentElement.close()">X</button>
+    </dialog>
+
+    <section id="projects" class="projects">
+        <!-- Project tiles will be inserted here by Project_Tile.js -->
+    </section>
+
+
+
+    <script src="Scripts/Info.js" defer></script>
+    <script src="Scripts/Project_Tile.js" defer></script>
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const projects = [
-                {id: 3, title: 'GPU Design' , image: 'images/gpu.png', description: 'A GPU designed from the ground up in Verilog, with a custom instruction set and a software rasterizer to test it', repo: 'https://github.com/ItsAKanifee/GPU', tags: ['GPU', 'Verilog', 'hardware']},
-                { id: 2, title: 'Quantum Squeezing', image: 'images/qs.png', repo: 'https://github.com/FRANK-RAN/Quantum-Measurement-Software', description: 'GPU Acceleration for faster data proccessing to better analyze the effect of Quantumly Squeezed Lasers', tags: ['quantum', 'GPU-acceleration'] },
-                { id: 1, title: 'Muse Brain Controller', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL6Wb_5CFsZf4hm8wdq6dgK4heVyo5daYczQ&s', description: 'EE + game controller using Muse', repo: 'https://github.com/ItsAKanifee/Muse_BrainReader_Game_Controller', tags: ['hardware','game'] },
-                { id: 0, title: 'Ray Tracer', image: 'images/rt.png', link: 'https://itsakanifee.github.io/Ray-Tracing/', description: 'Basic ray tracing demo', tags: ['graphics'] }
-            ];
+            const filtersEl = document.getElementById('project-filters');
+            const projectsSection = document.querySelector('.projects');
 
-            ProjectTile.createGrid('.projects', projects);
+            function createFilterButtons(categories) {
+                filtersEl.innerHTML = '';
+                const allBtn = document.createElement('button');
+                allBtn.textContent = 'All';
+                allBtn.className = 'filter-btn active';
+                filtersEl.appendChild(allBtn);
+                allBtn.addEventListener('click', () => { setActive(allBtn); renderProjects(); });
+
+                categories.forEach(cat => {
+                    const btn = document.createElement('button');
+                    btn.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+                    btn.className = 'filter-btn';
+                    filtersEl.appendChild(btn);
+                    btn.addEventListener('click', () => { setActive(btn); renderProjects(cat); });
+                });
+            }
+
+            function setActive(btn) {
+                document.querySelectorAll('#project-filters .filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            }
+
+            function renderProjects(category) {
+                projectsSection.innerHTML = '';
+                const items = (window.projectsData || []).filter(p => {
+                    if (!category) return true;
+                    return p.category && p.category === category;
+                });
+                ProjectTile.createGrid('.projects', items);
+            }
+
+            // load projects
+            fetch('projects.json')
+                .then(resp => resp.json())
+                .then(data => {
+                    window.projectsData = data;
+                    const cats = Array.from(new Set(data.map(p => p.category).filter(Boolean)));
+                    createFilterButtons(cats);
+                    renderProjects();
+                })
+                .catch(err => {
+                    console.error('Failed to load projects.json, falling back to inline list', err);
+                    const projects = [
+                        { id: 3, title: 'GPU Design', image: 'images/gpu.png', description: 'A GPU designed from the ground up in Verilog, with a custom instruction set and a software rasterizer to test it', repo: 'https://github.com/ItsAKanifee/GPU', tags: ['GPU', 'Verilog', 'hardware'], category: 'mixed' },
+                        { id: 2, title: 'Quantum Squeezing', image: 'images/qs.png', repo: 'https://github.com/FRANK-RAN/Quantum-Measurement-Software', description: 'GPU Acceleration for faster data proccessing to better analyze the effect of Quantumly Squeezed Lasers', tags: ['quantum', 'GPU-acceleration'], category: 'software' },
+                        { id: 1, title: 'Muse Brain Controller', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL6Wb_5CFsZf4hm8wdq6dgK4heVyo5daYczQ&s', description: 'EE + game controller using Muse', repo: 'https://github.com/ItsAKanifee/Muse_BrainReader_Game_Controller', tags: ['hardware', 'game'], category: 'hardware' },
+                        { id: 0, title: 'Ray Tracer', image: 'images/rt.png', link: 'https://itsakanifee.github.io/Ray-Tracing/', description: 'Basic ray tracing demo', tags: ['graphics'], category: 'software' }
+                    ];
+                    window.projectsData = projects;
+                    const cats = Array.from(new Set(projects.map(p => p.category).filter(Boolean)));
+                    createFilterButtons(cats);
+                    renderProjects();
+                });
         });
-        </script>
-        <script src="Scripts/RayTracer.js" async defer></script>
-    </body>
+    </script>
+    <script src="Scripts/RayTracer.js" async defer></script>
+</body>
+
 </html>

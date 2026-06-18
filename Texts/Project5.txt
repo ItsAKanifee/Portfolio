@@ -1,0 +1,7 @@
+Designed and fabricated custom PCBs that implemented classic guitar-effect circuits, including overdrive and EQ.
+
+I created schematics, performed PCB layout, and generated supplier-ready fabrication files (BOM, CPL, Gerber, and assembly specifications). I performed DFM checks and prepared assembly instructions so the boards could be produced and assembled by JLC PCB.
+
+This project blended audio electronics, PCB design, and real-world manufacturing workflows.
+
+Skills: Analog Circuits, Printed Circuit Board (PCB) Design, Manufacturing

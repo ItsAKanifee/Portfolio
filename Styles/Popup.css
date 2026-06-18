@@ -15,7 +15,7 @@ dialog{
 
 #dialog-content {
     max-width: 720px;
-    color: #fff;
+    color: #000000;
     background: transparent;
     padding: 16px;
     border-radius: 8px;
@@ -23,7 +23,7 @@ dialog{
 
 #dialog-content p {
     background: transparent;
-    color: #fff;
+    color: #000000;
     margin: 0 0 8px 0;
 }
 
@@ -39,7 +39,7 @@ dialog{
 .popup-tech__tag {
     display: inline-block;
     background: rgba(255,255,255,0.12);
-    color: #fff;
+    color: #000000;
     padding: 4px 8px;
     margin-right: 6px;
     border-radius: 6px;
@@ -58,8 +58,8 @@ dialog{
 
 .popup-details .popup-pre {
     white-space: pre-wrap;
-    background: transparent;
-    color: #fff;
+    background: #ffffff5d;
+    color: #000000;
     padding: 10px;
     border-radius: 6px;
     margin-top: 12px;

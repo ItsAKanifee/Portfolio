@@ -49,4 +49,14 @@
     "category": "hardware",
     "textFile": "Texts/Project4.txt"
   }
+  ,
+  {
+    "id": 5,
+    "title": "Guitar Effects PCBs",
+    "image": "images/pcb.png",
+    "description": "Designed and fabricated custom PCBs implementing classic guitar-effect circuits (overdrive, EQ). Created supplier-ready fabrication files (BOM, CPL, assembly specs) for JLC PCB assembly.",
+    "tags": ["analog","PCB","audio","guitar","manufacturing"],
+    "category": "hardware",
+    "textFile": "Texts/Project5.txt"
+  }
 ]

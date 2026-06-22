@@ -11,7 +11,7 @@ header {
     top: 0;
     left: 0;
     width: 100vw;
-    padding: 1rem 9%;
+    padding: clamp(0.6rem, 1.5vw, 1rem) clamp(4%, 9%);
     background: #ffffff7c;
     display: flex;
     filter: drop-shadow(0 0 0.75rem #000);
@@ -22,8 +22,8 @@ header {
 }
 
 .logo {
-    height: 5vw;
-    font-size: 2.5rem;
+    height: auto;
+    font-size: clamp(1.4rem, 2.5vw, 2.5rem);
     color: #000;
     font-weight: 600;
     cursor: pointer;
@@ -38,8 +38,96 @@ nav a.active {
 }
 
 nav a {
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
     color: #000;
-    margin-left: 2rem;
+    margin-left: clamp(1rem, 2vw, 2rem);
     text-decoration: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    header {
+        padding: 0.75rem 6%;
+    }
+    .logo {
+        font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+    }
+    nav a {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.6rem 4%;
+        gap: 0.5rem;
+    }
+    .logo {
+        font-size: 1.05rem;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    nav a {
+        font-size: 0.95rem;
+        margin-left: 0.6rem;
+    }
+}
+
+/* Hamburger button */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.hamburger .bar {
+    display: block;
+    width: 1.4rem;
+    height: 2px;
+    background: #000;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.hamburger .bar::before,
+.hamburger .bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 1.4rem;
+    height: 2px;
+    background: #000;
+    transition: all 0.3s ease;
+}
+.hamburger .bar::before { top: -6px; }
+.hamburger .bar::after { top: 6px; }
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    nav { display: none; }
+    header.menu-open nav {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        right: 4%;
+        background: #ffffffee;
+        padding: 0.5rem 0.75rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        min-width: 160px;
+    }
+    header.menu-open nav a { margin-left: 0; }
+    header.menu-open .hamburger .bar { background: transparent; }
+    header.menu-open .hamburger .bar::before { transform: rotate(45deg) translate(5px,5px); top: 0; }
+    header.menu-open .hamburger .bar::after { transform: rotate(-45deg) translate(5px,-5px); top: 0; }
 }

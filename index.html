@@ -23,9 +23,13 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <header>
-        <h1 id="logo">Ajay Clark-Desai</h1>
+        <h1 id="logo" class="logo">Ajay Clark-Desai</h1>
 
-        <nav>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="bar"></span>
+        </button>
+
+        <nav id="primary-nav">
             <a href="index.html">Home</a>
             <a href="javascript:AboutMe()">About Me</a>
             <a href="index.html#projects">Projects</a>
@@ -76,6 +80,7 @@
 
     <script src="Scripts/Info.js" defer></script>
     <script src="Scripts/Project_Tile.js" defer></script>
+    <script src="Scripts/hamburger.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const filtersEl = document.getElementById('project-filters');

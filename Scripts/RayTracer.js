@@ -1,4 +1,7 @@
 const canvas = document.getElementById("canvas");
+if (!canvas) {
+  console.warn("RayTracer canvas not found; skipping renderer.");
+} else {
 const ctx = canvas.getContext("2d");
 
 
@@ -364,3 +367,4 @@ function rgb(r, g, b) {
 }
 
 render();
+}

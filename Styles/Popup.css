@@ -13,7 +13,8 @@ dialog {
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     overflow: hidden;
-    max-width: min(92vw, 44rem);
+    max-width: min(92vw, 60rem);
+    min-height: 100px;
 }
 
 dialog::backdrop {
@@ -23,6 +24,7 @@ dialog::backdrop {
 
 #dialog-content {
     max-width: 720px;
+    padding-right: 3.5rem;
     color: #241b16;
     background: transparent;
     padding: 1.2rem 1.3rem 1.1rem;

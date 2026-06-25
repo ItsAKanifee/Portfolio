@@ -1,6 +1,21 @@
 const dialog = document.querySelector("dialog");
 var InfoText = "";
 
+// Load contact information from Contact.txt on page load
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('Texts/Contact.txt')
+        .then(response => response.text())
+        .then(data => {
+            InfoText = data.split('\n').map(line => line.trim()).filter(Boolean).join('<br>');
+            window.InfoText = InfoText;
+        })
+        .catch(err => {
+            console.log('Could not load Contact.txt', err);
+            InfoText = 'Contact me at: ajaycd@icloud.com';
+            window.InfoText = InfoText;
+        });
+});
+
 // close the dialog when clicking outside the dialog content (backdrop)
 if (dialog) {
     dialog.addEventListener('click', (e) => {
